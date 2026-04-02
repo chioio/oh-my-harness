@@ -1,0 +1,53 @@
+{
+  "name": "@chioio/oh-my-harness",
+  "version": "0.1.0",
+  "description": "Personal harness engineering CLI and workspace.",
+  "keywords": [
+    "agents",
+    "cli",
+    "harness",
+    "npx",
+    "template"
+  ],
+  "homepage": "https://github.com/chioio/oh-my-harness#readme",
+  "bugs": {
+    "url": "https://github.com/chioio/oh-my-harness/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chioio/oh-my-harness.git"
+  },
+  "bin": {
+    "agents-md-harness": "bin/agents-md-harness.js",
+    "oh-my-harness": "bin/agents-md-harness.js"
+  },
+  "files": [
+    "bin",
+    "kit",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "commonjs",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "changeset": "changeset",
+    "setup:fixture": "node ./bin/agents-md-harness.js setup ./.tmp/fixture --force",
+    "test": "node --test",
+    "test:cli": "node ./bin/agents-md-harness.js setup ./.tmp/fixture --force",
+    "version-packages": "changeset version",
+    "release": "changeset publish",
+    "format": "oxfmt .",
+    "format:check": "oxfmt --check ."
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.30.0",
+    "oxfmt": "^0.42.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@10.30.3"
+}
