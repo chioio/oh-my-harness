@@ -105,21 +105,11 @@ This repo uses Changesets.
 - GitHub Actions opens or updates a release PR
 - Merging the release PR publishes to npm and creates the git tag / GitHub release
 
-## First publish bootstrap
+Trusted Publishing should point to:
 
-For `@chioio/oh-my-harness`, if the package does not exist on npm yet, bootstrap the first public release once before enabling npm Trusted Publishing.
-
-Recommended bootstrap path:
-
-1. Add a temporary `NPM_TOKEN` GitHub secret
-2. Run the `Bootstrap Publish` workflow once
-3. Confirm the package exists on npm
-4. Configure npm Trusted Publishing for:
-   - owner/user: `chioio`
-   - repository: `oh-my-harness`
-   - workflow filename: `release.yml`
-5. Remove the temporary `NPM_TOKEN`
-6. Use the normal Changesets release flow afterward
+- owner/user: `chioio`
+- repository: `oh-my-harness`
+- workflow filename: `publish.yml`
 
 ## License
 
