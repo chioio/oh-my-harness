@@ -1,6 +1,6 @@
 {
   "name": "@chioio/oh-my-harness",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Personal harness engineering CLI and workspace.",
   "keywords": [
     "agents",
